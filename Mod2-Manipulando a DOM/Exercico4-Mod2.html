@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+
+    <body>
+        <div class="app">
+            <input type="text" name="nome" id="nome" />
+            <button class="botao">Adicionar</button>
+        </div>
+        <script>
+            var input = document.querySelector('input[name=nome]');
+            var bot = document.querySelector('button.botao');
+            var container = document.querySelector('.app');
+            var lista = document.createElement('ul');
+
+            bot.onclick = function(){
+                var text = input.value;
+                var item = document.createElement('li');
+                
+                item.innerHTML = text;
+                lista.appendChild(item);
+
+                container.appendChild(lista);
+                input.value = '';
+
+            };
+        </script>
+    </body>

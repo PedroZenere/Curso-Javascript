@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+
+    <body>
+        <button name="botao" onclick="addElement()">Cria Quadrado</button>
+        <script>
+            var newColor;
+            function addElement() {
+                var boxElement = document.createElement('div');
+
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+                boxElement.addEventListener('mouseover', function(){
+                    newColor = getRandomColor();
+                    return this.style.backgroundColor = newColor;
+                });
+
+                boxElement.setAttribute('class','box');
+                document.body.appendChild(boxElement);
+
+            }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                    var color = "#";
+                    for (var i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return color;
+            }
+        </script>
+    </body>

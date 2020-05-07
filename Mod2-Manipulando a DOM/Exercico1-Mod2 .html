@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+
+    <body>
+        <button id="botao">Cria Quadrado</button>
+        <script>
+            var bot = document.querySelector('#botao');
+
+            bot.onclick = function() {
+                var boxElement = document.createElement('div');
+
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+
+                boxElement.setAttribute('class','box');
+                document.body.appendChild(boxElement);
+
+            }
+        </script>
+    </body>

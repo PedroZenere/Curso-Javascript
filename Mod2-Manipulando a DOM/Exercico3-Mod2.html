@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>
+    </head>
+
+    <body>
+        <div class="app"></div>
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var container = document.querySelector('.app');
+            var lista = document.createElement('ul');
+        
+            for(const value of nomes){
+                var item = document.createElement('li');
+                item.innerHTML = value;
+                lista.appendChild(item);
+            }
+            
+            container.appendChild(lista);
+            
+        </script>
+    </body>
